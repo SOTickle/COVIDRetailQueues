@@ -1,0 +1,18 @@
+This repository contains code for modelling the progress of an infection within a population when members of that population are exposed to one another in the retail setting.
+
+The file main.R calls all other files in this repository, and contains the wrapper function MatrixResult along with an example use of the function.
+
+The parameters MaskProb and UnsafeInteractions can be entered as vectors to give a clearer picture of the number of people who will become infected for different levels of mask-wearing (given as a proportion between 0 and 1) and rates of unsafe interaction (per hour, given as a positive number).
+
+There are many other parameters to tune, both as inputs to the function and immediately within the definition of the function. These include:
+
+-ServerMasks: Do servers wear masks? (True/False)
+-ExtraSafety: Should extra safety (e.g. a screen) be in place at each counter for each server? (True/False)
+-NumTotal: How many people can the shop draw upon to act as servers?
+-NumStat: How many counters are there?
+-IncubationTime: What is the (average) incubation time of the disease (in hours)?
+-Multiple: Is the queue organised into multiple queues?
+-NearestNeighbour: Can the infection only spread from people who are next to each other in the queue?
+-Queue_Capacity: Total number of people who can wait/be served in the system of queues.
+
+Other parameters are discussed in detail in main.R.
